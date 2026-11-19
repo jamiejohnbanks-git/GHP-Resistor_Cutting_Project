@@ -1,11 +1,14 @@
-# Nano / KMRTM24024-SPI — wiring handoff, revision A
+# Nano / KMRTM24024-SPI — wiring handoff, revision B
 
 **Status: conditional reference design; not approved for installation or power-up on the unmodified MR Innovative PCB.**
 
 This package follows the hardware-SPI pin map in the supplied task. It supersedes the earlier chat's software-SPI map. Do not mix the two maps. The uploaded brief ends mid-sentence after “Left: Arduino Nano with individually labelled”; the rest of the page layout was chosen to make the wiring traceable.
 
+Read [wiring-review.md](wiring-review.md) for the detailed schematic audit and corrected power/enable interpretation. The supplied hardware-SPI map remains conditional.
+
 ## Files
 
+- `wiring-review.md`: detailed PCB/Nano/motor-driver review with a candidate software-SPI alternative.
 - `Nano-TFT-wiring-A3.pdf`: two landscape A3 sheets, vector graphics with embedded fonts. Print at actual size.
 - `signal-schematic-A3.svg`: editable vector signal drawing.
 - `power-and-checks-A3.svg`: editable power/parts/checks sheet.
@@ -20,11 +23,16 @@ No generative image tools were used. Resistor symbols are IEC rectangles. Filled
 ## Why this is conditional
 
 1. **Existing L298N:** the published PCB connects D7/D8/D10/D11 to L298N inputs 1/2/3/4. These are occupied pins, not spare SPI pins. Hardware SPI and control signals will toggle the L298N if left connected. Disconnecting motors alone does not isolate the inputs. Removing IC power alone risks back-powering. A technician must document physical logic isolation before this map is used; if the L298N remains needed for feeding, this allocation needs redesign rather than simply disabling it.
-2. **A4988 enable:** D12 is wired to both A4988 active-low enables. MISO must be an input and cannot share an actively controlled enable net. Isolate the Nano from both enables, keep the driver-side enable safely defined, and assign a separate enable strategy. Do not cut traces without establishing the actual board routing and preserving the feeding plan. The older Stage 1 sketch explicitly drives D12 HIGH: it must not be used with MISO connected.
+2. **A4988 enable:** D12 reaches both A4988 active-low enables through the two-pin EN link when that link is fitted. MISO must be an input and cannot share an actively controlled enable net. Verify/remove the EN link as a possible reversible isolation point, keep the driver-side enable safely defined, and assign a separate enable strategy. Do not cut traces without establishing the actual board routing and preserving the feeding plan. The older Stage 1 sketch explicitly drives D12 HIGH: it must not be used with MISO connected.
+The original firmware's D9 enable controls BOTH L298N bridge enables, separately from D12/A4988. It is not a D9/D12 documentation mismatch.
 3. **Remaining signals:** leave the encoder unplugged on D2/D4. Preserve D5/D6 for MG90S, A0-A3 for A4988 STEP/DIR, and D0/D1 for USB serial. D13 has no other load shown in the source PCB schematic, but Nano onboard LED loading still exists. Confirm the actual PCB revision by continuity.
 4. **Power:** the task requests a regulated 3.3V TFT supply, which the drawing shows. That does not prove 3.3V on the module's VCC header reaches its internal rail correctly. Read the actual U1 marking and confirm J1's function first. A 3.3V input through an unbypassed regulator can produce too little voltage. Do not bridge a jumper based only on its name.
 5. **Backlight:** LED supply/current limiting is unverified. JP2 stays open until the backlight arrangement is confirmed. A bare LED string needs controlled current; it must not be assumed to have an onboard resistor or connected to a Nano GPIO.
 6. **Chip identities:** the photo identifies the connector labels, not the exact LCD and touch controller silicon. ILI9341/XPT2046 are possibilities, not verified identities. Select libraries only after identification.
+
+## Supply rail correction
+
+The MR drawing uses distinct `5V` (Nano output, including ENCODER/I2C/HC-05 and motor logic supplies) and `+5V` (two paralleled 7805 outputs, servo selector and pots). Do not assume the header 5V comes from the servo regulators or add the two 7805 current ratings together. The drawing also marks A1/A3 STEP pull-downs as 200 ohms: inspect actual fitted values before driving them. See the detailed review for measurements and implications.
 
 ## Divider calculation — six channels, not five
 

@@ -1,6 +1,6 @@
 {
   "title": "Nano / KMRTM24024-SPI conditional hardware-SPI interface",
-  "revision": "A",
+  "revision": "B",
   "status": "NOT RELEASED FOR WIRING OR POWER-UP",
   "netlist": {
     "LCD_CS_5V": [
@@ -297,7 +297,7 @@
   "unresolved": [
     "Actual LCD / touch controller identity",
     "D7/D8/D10/D11 isolation from L298N",
-    "D12 isolation from both A4988 enable inputs",
+    "D12 EN-link state and isolation from both A4988 enable inputs",
     "TFT VCC regulator/jumper configuration",
     "Backlight current limiting",
     "Divider recommended operating voltage compliance",

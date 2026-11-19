@@ -44,13 +44,13 @@ net('TFT_VCC','JP1.2','TFT.VCC','C1.1','C2.1')
 net('BACKLIGHT_SUPPLY','JP2.2','TFT.LED')
 COMPONENTS += [dict(ref=f'JP{i}',type='normally-open commissioning link') for i in range(1,6)]
 COMPONENTS += [dict(ref='C1',value='100nF ceramic, >=10V'),dict(ref='C2',value='10uF, >=10V; polarity as marked'),dict(ref='BUCK',value='Complete 12V-input / 3.3V-output module, >=500mA continuous')]
-DOC=dict(title='Nano / KMRTM24024-SPI conditional hardware-SPI interface',revision='A',status='NOT RELEASED FOR WIRING OR POWER-UP',netlist=NETS,components=COMPONENTS,channels=CHANNELS,links={
+DOC=dict(title='Nano / KMRTM24024-SPI conditional hardware-SPI interface',revision='B',status='NOT RELEASED FOR WIRING OR POWER-UP',netlist=NETS,components=COMPONENTS,channels=CHANNELS,links={
  'JP1':'Close only after validating module VCC and 3.3V regulator bypass arrangement',
  'JP2':'Close only after validating backlight voltage and current limiting',
  'JP3':'Display SDO: close only if tri-state and return voltage margins verified',
  'JP4':'Touch T_OUT: close only if tri-state and return voltage margins verified',
  'JP5':'Optional interrupt: close only after voltage and pull-up verification'},
- unresolved=['Actual LCD / touch controller identity','D7/D8/D10/D11 isolation from L298N','D12 isolation from both A4988 enable inputs','TFT VCC regulator/jumper configuration','Backlight current limiting','Divider recommended operating voltage compliance','AVR input-high margin on 3.3V return signals','Shared MISO high-impedance behavior'])
+ unresolved=['Actual LCD / touch controller identity','D7/D8/D10/D11 isolation from L298N','D12 EN-link state and isolation from both A4988 enable inputs','TFT VCC regulator/jumper configuration','Backlight current limiting','Divider recommended operating voltage compliance','AVR input-high margin on 3.3V return signals','Shared MISO high-impedance behavior'])
 (OUT/'connection-netlist.json').write_text(json.dumps(DOC,indent=2))
 with (OUT/'connections.csv').open('w',newline='') as f:
     wr=csv.writer(f);wr.writerow(['Net','Endpoints'])
@@ -86,13 +86,13 @@ class Drawing:
         # Actual drawing is an open link, with no conductor across gap.
     def footer(self,sheet):
         self.line(10,284,410,284,GREY)
-        self.text(12,290,'RRC-TFT-001 | Rev A | 20 Nov 2026 | A3 landscape | NOT RELEASED',2.5,RED,True)
+        self.text(12,290,'RRC-TFT-001 | Rev B | 20 Nov 2026 | A3 landscape | NOT RELEASED',2.5,RED,True)
         self.text(316,290,f'{sheet} | Dots = junctions; same net names connect',2.3,GREY)
     def end(self,name):
         self.svg.append('</svg>');(OUT/name).write_text('\n'.join(self.svg));all_wires.extend(self.wires);self.c.showPage()
 
 pdf=canvas.Canvas(str(OUT/'Nano-TFT-wiring-A3.pdf'),pagesize=(W*mm,H*mm))
-pdf.setTitle('Resistor Reel Cutter - Nano TFT Wiring - Conditional Design Rev A')
+pdf.setTitle('Resistor Reel Cutter - Nano TFT Wiring - Conditional Design Rev B')
 all_wires=[];d=Drawing(pdf)
 d.begin()
 d.text(12,15,'ARDUINO NANO + SPI TOUCHSCREEN',6,INK,True)
@@ -134,7 +134,7 @@ for ch in CHANNELS:
 
 y=211
 d.text(18,y,'D12 / MISO',3.5,INK,True)
-d.text(18,y+5,'ISOLATE: A4988 EN x2',2.3,RED)
+d.text(18,y+5,'EN link: verify / isolate',2.3,RED)
 d.text(18,y+10,'Input only after isolation',2.3,GREY)
 d.wire(80,y,230,y,'SPI_MISO');d.dot(230,y)
 d.wire(230,y-4,230,y+4,'SPI_MISO')
@@ -172,6 +172,7 @@ d.wire(321,64,343,64,'BACKLIGHT_SUPPLY',GREEN);d.text(347,65,'TFT LED',3,INK,Tru
 d.text(296,49,'JP1: VCC verified first',2.4,RED)
 d.text(296,73,'JP2: backlight verified first',2.4,RED)
 d.text(12,84,'GND: supply negative + PCB/Nano ground + buck VIN-/VOUT- + TFT GND + every divider lower end.',2.8,INK,True)
+d.text(12,95,'PCB 5V is the Nano rail; +5V is the servo rail. Verify paralleled 7805 outputs and STEP pull-downs marked 200 ohms.',2.6,RED)
 d.text(12,90,'C1 100nF and C2 10uF connect across TFT VCC/GND near the header. Do not join 3.3V to Nano 5V or servo power.',2.6)
 # Two report columns, avoiding cross-column text.
 def lines(x,y,items,size=2.65,leading=4.5,color=INK):
@@ -181,10 +182,10 @@ d.text(12,102,'A. PCB PIN CONFLICTS',3.5,RED,True)
 lines(12,109,[
  'D7/D8/D10/D11 already feed the L298N inputs.',
  'Hardware SPI will toggle the L298N unless these nets are isolated.',
- 'D12 feeds BOTH A4988 enable inputs; it cannot remain on that net',
- 'while serving as MISO. Driving D12 HIGH in the old sketch conflicts.',
- 'Isolate the Nano side from both enables; preserve independent',
- 'driver enable control with a suitable pull-up / reassigned control.',
+ 'D12 reaches BOTH A4988 enables through the 2-pin EN link.',
+ 'With EN link fitted, MISO conflicts with the motor enables.',
+ 'Remove/verify EN link before MISO; keep driver enables defined.',
+ 'D9 controls BOTH L298N enables; LOW disables those bridges.',
  'Motor unplugging alone does not isolate these logic connections.',
  'Removing power from an IC alone can cause signal back-powering.',
  'D4/D2: leave encoder unplugged. D0/D1: preserve USB Serial.',
@@ -241,7 +242,7 @@ lines(16,232,[
 ],2.65,7,RED)
 lines(12,262,[
  'Sources: original MR Innovative multipurpose schematic (Rev 1.0, 2021-01-22); ILI9341 manufacturer datasheet Sections 18.1/18.2;',
- 'TI SN74LVC245A product/datasheet; Diodes AP63203Q product and AP63203QWU-EVM guide. Full URLs and calculations in handoff-notes.md.'
+ 'TI SN74LVC245A product/datasheet; Diodes AP63203Q product and AP63203QWU-EVM guide. Full URLs in handoff-notes.md; corrections in wiring-review.md.'
 ],2.5,5,GREY)
 d.footer('Sheet 2/2');d.end('power-and-checks-A3.svg');pdf.save()
 

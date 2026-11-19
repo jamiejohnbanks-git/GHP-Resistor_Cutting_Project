@@ -32,14 +32,15 @@
 <text x="296" y="49" font-family="Helvetica,Arial,sans-serif" font-size="2.4" font-weight="normal" fill="#b12935">JP1: VCC verified first</text>
 <text x="296" y="73" font-family="Helvetica,Arial,sans-serif" font-size="2.4" font-weight="normal" fill="#b12935">JP2: backlight verified first</text>
 <text x="12" y="84" font-family="Helvetica,Arial,sans-serif" font-size="2.8" font-weight="bold" fill="#182b3a">GND: supply negative + PCB/Nano ground + buck VIN-/VOUT- + TFT GND + every divider lower end.</text>
+<text x="12" y="95" font-family="Helvetica,Arial,sans-serif" font-size="2.6" font-weight="normal" fill="#b12935">PCB 5V is the Nano rail; +5V is the servo rail. Verify paralleled 7805 outputs and STEP pull-downs marked 200 ohms.</text>
 <text x="12" y="90" font-family="Helvetica,Arial,sans-serif" font-size="2.6" font-weight="normal" fill="#182b3a">C1 100nF and C2 10uF connect across TFT VCC/GND near the header. Do not join 3.3V to Nano 5V or servo power.</text>
 <text x="12" y="102" font-family="Helvetica,Arial,sans-serif" font-size="3.5" font-weight="bold" fill="#b12935">A. PCB PIN CONFLICTS</text>
 <text x="12" y="109" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">D7/D8/D10/D11 already feed the L298N inputs.</text>
 <text x="12" y="113.3" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Hardware SPI will toggle the L298N unless these nets are isolated.</text>
-<text x="12" y="117.6" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">D12 feeds BOTH A4988 enable inputs; it cannot remain on that net</text>
-<text x="12" y="121.89999999999999" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">while serving as MISO. Driving D12 HIGH in the old sketch conflicts.</text>
-<text x="12" y="126.19999999999999" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Isolate the Nano side from both enables; preserve independent</text>
-<text x="12" y="130.5" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">driver enable control with a suitable pull-up / reassigned control.</text>
+<text x="12" y="117.6" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">D12 reaches BOTH A4988 enables through the 2-pin EN link.</text>
+<text x="12" y="121.89999999999999" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">With EN link fitted, MISO conflicts with the motor enables.</text>
+<text x="12" y="126.19999999999999" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Remove/verify EN link before MISO; keep driver enables defined.</text>
+<text x="12" y="130.5" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">D9 controls BOTH L298N enables; LOW disables those bridges.</text>
 <text x="12" y="134.8" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Motor unplugging alone does not isolate these logic connections.</text>
 <text x="12" y="139.10000000000002" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Removing power from an IC alone can cause signal back-powering.</text>
 <text x="12" y="143.40000000000003" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">D4/D2: leave encoder unplugged. D0/D1: preserve USB Serial.</text>
@@ -86,8 +87,8 @@
 <text x="16" y="239" font-family="Helvetica,Arial,sans-serif" font-size="2.65" font-weight="normal" fill="#b12935">verify VCC/backlight arrangement; verify shared-MISO release; check 3.3V polarity/voltage under load before closing JP1/JP2.</text>
 <text x="16" y="246" font-family="Helvetica,Arial,sans-serif" font-size="2.65" font-weight="normal" fill="#b12935">First display test: isolate actuators; start SPI slowly and inspect waveforms. Then integrate with the working cutter firmware.</text>
 <text x="12" y="262" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#566673">Sources: original MR Innovative multipurpose schematic (Rev 1.0, 2021-01-22); ILI9341 manufacturer datasheet Sections 18.1/18.2;</text>
-<text x="12" y="267" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#566673">TI SN74LVC245A product/datasheet; Diodes AP63203Q product and AP63203QWU-EVM guide. Full URLs and calculations in handoff-notes.md.</text>
+<text x="12" y="267" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#566673">TI SN74LVC245A product/datasheet; Diodes AP63203Q product and AP63203QWU-EVM guide. Full URLs in handoff-notes.md; corrections in wiring-review.md.</text>
 <line x1="10" y1="284" x2="410" y2="284" stroke="#566673" stroke-width="0.35"/>
-<text x="12" y="290" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="bold" fill="#b12935">RRC-TFT-001 | Rev A | 20 Nov 2026 | A3 landscape | NOT RELEASED</text>
+<text x="12" y="290" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="bold" fill="#b12935">RRC-TFT-001 | Rev B | 20 Nov 2026 | A3 landscape | NOT RELEASED</text>
 <text x="316" y="290" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#566673">Sheet 2/2 | Dots = junctions; same net names connect</text>
 </svg>

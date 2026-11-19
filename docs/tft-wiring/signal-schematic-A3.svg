@@ -136,7 +136,7 @@
 <line x1="139" y1="179" x2="284" y2="179" stroke="#16698b" stroke-width="0.38"/>
 <text x="290" y="180" font-family="Helvetica,Arial,sans-serif" font-size="3.2" font-weight="bold" fill="#182b3a">T_CS</text>
 <text x="18" y="211" font-family="Helvetica,Arial,sans-serif" font-size="3.5" font-weight="bold" fill="#182b3a">D12 / MISO</text>
-<text x="18" y="216" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#b12935">ISOLATE: A4988 EN x2</text>
+<text x="18" y="216" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#b12935">EN link: verify / isolate</text>
 <text x="18" y="221" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#566673">Input only after isolation</text>
 <line x1="80" y1="211" x2="230" y2="211" stroke="#16698b" stroke-width="0.38"/>
 <circle cx="230" cy="211" r=".8" fill="#16698b"/>
@@ -164,6 +164,6 @@
 <text x="17" y="264" font-family="Helvetica,Arial,sans-serif" font-size="2.8" font-weight="normal" fill="#182b3a">See Sheet 2 for 12V split, regulated 3.3V, common ground, VCC/backlight conditions and parts list.</text>
 <text x="17" y="271" font-family="Helvetica,Arial,sans-serif" font-size="2.6" font-weight="normal" fill="#182b3a">Keep MG90S on D5/D6 and A4988 STEP/DIR on A0-A3. SD-card pins unused. Do not load older D12-enable firmware.</text>
 <line x1="10" y1="284" x2="410" y2="284" stroke="#566673" stroke-width="0.35"/>
-<text x="12" y="290" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="bold" fill="#b12935">RRC-TFT-001 | Rev A | 20 Nov 2026 | A3 landscape | NOT RELEASED</text>
+<text x="12" y="290" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="bold" fill="#b12935">RRC-TFT-001 | Rev B | 20 Nov 2026 | A3 landscape | NOT RELEASED</text>
 <text x="316" y="290" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#566673">Sheet 1/2 | Dots = junctions; same net names connect</text>
 </svg>

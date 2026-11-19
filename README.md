@@ -2,7 +2,13 @@
 
 Arduino Nano on the original MR Innovative controller PCB, with two MG90S cutter servos.
 
-## TFT wiring documentation — revision A
+## Schematic review
+
+[Read the PCB, Arduino Nano and motor-controller wiring review](docs/tft-wiring/wiring-review.md).
+
+Confirmed corrections: D9 controls both L298N enables; D12 connects to A4988 enables through the two-pin EN link; Nano `5V` and servo `+5V` are distinct rails. Verify STEP pull-downs labelled 200 ohms and paralleled 7805 outputs on the actual board. Preserve the motor connections and prefer the software-SPI candidate in the review over the conditional hardware-SPI drawing.
+
+## TFT wiring documentation — revision B
 
 **Conditional reference design — not approved for wiring or power-up on an unmodified controller PCB.**
 
