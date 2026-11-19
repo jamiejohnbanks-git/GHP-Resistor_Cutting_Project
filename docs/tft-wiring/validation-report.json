@@ -1,0 +1,19 @@
+{
+  "checks_passed": [
+    "Every electrical endpoint belongs to exactly one named net",
+    "Six independently defined upper/lower divider pairs",
+    "Shared SCK and MOSI branches use one divider each",
+    "D4 is touch CS, D13 is clock, D12 is MISO, D2 is optional IRQ",
+    "Servo signals D5/D6 are excluded",
+    "No different-net wire crossings or overlaps in rendered drawings",
+    "Every rendered conductor is recorded with net name and endpoints",
+    "Text stays within A3 horizontal bounds"
+  ],
+  "electrical_release": "BLOCKED: see unresolved conditions; geometry checks do not approve hardware",
+  "divider_worst_case_V": {
+    "nominal_5V": 3.3333333333333335,
+    "5.25V_1pct": 3.5232558139534884,
+    "5.25V_5pct": 3.6147540983606556
+  },
+  "rendered_wire_segments": 54
+}

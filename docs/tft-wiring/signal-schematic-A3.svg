@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297"><rect width="420" height="297" fill="white"/>
+<text x="12" y="15" font-family="Helvetica,Arial,sans-serif" font-size="6" font-weight="bold" fill="#182b3a">ARDUINO NANO + SPI TOUCHSCREEN</text>
+<text x="12" y="23" font-family="Helvetica,Arial,sans-serif" font-size="3" font-weight="normal" fill="#566673">Explicit netlist schematic | Proposed hardware-SPI assignment from the supplied brief</text>
+<rect x="12" y="29" width="396" height="12" fill="#fff2f0" stroke="#b12935" stroke-width=".3"/>
+<text x="16" y="36.7" font-family="Helvetica,Arial,sans-serif" font-size="3.5" font-weight="bold" fill="#b12935">HOLD: isolate occupied PCB nets and resolve electrical checks on Sheet 2 before connecting.</text>
+<rect x="12" y="48" width="68" height="190" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="17" y="55" font-family="Helvetica,Arial,sans-serif" font-size="3.5" font-weight="bold" fill="#182b3a">NANO ON MR PCB</text>
+<rect x="284" y="48" width="124" height="190" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="290" y="55" font-family="Helvetica,Arial,sans-serif" font-size="3.5" font-weight="bold" fill="#182b3a">KMRTM24024-SPI</text>
+<text x="18" y="64" font-family="Helvetica,Arial,sans-serif" font-size="3.6" font-weight="bold" fill="#182b3a">D10</text>
+<text x="18" y="69" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#566673">Nano D10</text>
+<text x="18" y="74" font-family="Helvetica,Arial,sans-serif" font-size="2.15" font-weight="normal" fill="#b12935">ISOLATE: L298N input 3</text>
+<line x1="80" y1="64" x2="104" y2="64" stroke="#16698b" stroke-width="0.38"/>
+<rect x="104" y="62.5" width="12" height="3" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="102" y="60" font-family="Helvetica,Arial,sans-serif" font-size="2.6" font-weight="normal" fill="#182b3a">R1  1k</text>
+<line x1="116" y1="64" x2="139" y2="64" stroke="#16698b" stroke-width="0.38"/>
+<circle cx="139" cy="64" r=".8" fill="#16698b"/>
+<line x1="139" y1="64" x2="139" y2="70" stroke="#16698b" stroke-width="0.38"/>
+<rect x="137.5" y="70" width="3" height="6" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="144" y="74" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#182b3a">R2  2k</text>
+<line x1="139" y1="76" x2="139" y2="80" stroke="#566673" stroke-width="0.38"/>
+<line x1="137.0" y1="80" x2="141.0" y2="80" stroke="#566673" stroke-width="0.3"/>
+<line x1="137.65" y1="81.2" x2="140.35" y2="81.2" stroke="#566673" stroke-width="0.3"/>
+<line x1="138.4" y1="82.4" x2="139.6" y2="82.4" stroke="#566673" stroke-width="0.3"/>
+<text x="143" y="81.4" font-family="Helvetica,Arial,sans-serif" font-size="2.2" font-weight="normal" fill="#566673">GND</text>
+<text x="161" y="60" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#16698b">LCD_CS_3V3</text>
+<line x1="139" y1="64" x2="284" y2="64" stroke="#16698b" stroke-width="0.38"/>
+<text x="290" y="65" font-family="Helvetica,Arial,sans-serif" font-size="3.2" font-weight="bold" fill="#182b3a">CS</text>
+<text x="334" y="74" font-family="Helvetica,Arial,sans-serif" font-size="2.25" font-weight="bold" fill="#b12935">PCB NET CONFLICT</text>
+<text x="18" y="87" font-family="Helvetica,Arial,sans-serif" font-size="3.6" font-weight="bold" fill="#182b3a">D7</text>
+<text x="18" y="92" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#566673">Nano D7</text>
+<text x="18" y="97" font-family="Helvetica,Arial,sans-serif" font-size="2.15" font-weight="normal" fill="#b12935">ISOLATE: L298N input 1</text>
+<line x1="80" y1="87" x2="104" y2="87" stroke="#16698b" stroke-width="0.38"/>
+<rect x="104" y="85.5" width="12" height="3" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="102" y="83" font-family="Helvetica,Arial,sans-serif" font-size="2.6" font-weight="normal" fill="#182b3a">R3  1k</text>
+<line x1="116" y1="87" x2="139" y2="87" stroke="#16698b" stroke-width="0.38"/>
+<circle cx="139" cy="87" r=".8" fill="#16698b"/>
+<line x1="139" y1="87" x2="139" y2="93" stroke="#16698b" stroke-width="0.38"/>
+<rect x="137.5" y="93" width="3" height="6" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="144" y="97" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#182b3a">R4  2k</text>
+<line x1="139" y1="99" x2="139" y2="103" stroke="#566673" stroke-width="0.38"/>
+<line x1="137.0" y1="103" x2="141.0" y2="103" stroke="#566673" stroke-width="0.3"/>
+<line x1="137.65" y1="104.2" x2="140.35" y2="104.2" stroke="#566673" stroke-width="0.3"/>
+<line x1="138.4" y1="105.4" x2="139.6" y2="105.4" stroke="#566673" stroke-width="0.3"/>
+<text x="143" y="104.4" font-family="Helvetica,Arial,sans-serif" font-size="2.2" font-weight="normal" fill="#566673">GND</text>
+<text x="161" y="83" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#16698b">LCD_RST_3V3</text>
+<line x1="139" y1="87" x2="284" y2="87" stroke="#16698b" stroke-width="0.38"/>
+<text x="290" y="88" font-family="Helvetica,Arial,sans-serif" font-size="3.2" font-weight="bold" fill="#182b3a">RESET</text>
+<text x="334" y="97" font-family="Helvetica,Arial,sans-serif" font-size="2.25" font-weight="bold" fill="#b12935">PCB NET CONFLICT</text>
+<text x="18" y="110" font-family="Helvetica,Arial,sans-serif" font-size="3.6" font-weight="bold" fill="#182b3a">D8</text>
+<text x="18" y="115" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#566673">Nano D8</text>
+<text x="18" y="120" font-family="Helvetica,Arial,sans-serif" font-size="2.15" font-weight="normal" fill="#b12935">ISOLATE: L298N input 2</text>
+<line x1="80" y1="110" x2="104" y2="110" stroke="#16698b" stroke-width="0.38"/>
+<rect x="104" y="108.5" width="12" height="3" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="102" y="106" font-family="Helvetica,Arial,sans-serif" font-size="2.6" font-weight="normal" fill="#182b3a">R5  1k</text>
+<line x1="116" y1="110" x2="139" y2="110" stroke="#16698b" stroke-width="0.38"/>
+<circle cx="139" cy="110" r=".8" fill="#16698b"/>
+<line x1="139" y1="110" x2="139" y2="116" stroke="#16698b" stroke-width="0.38"/>
+<rect x="137.5" y="116" width="3" height="6" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="144" y="120" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#182b3a">R6  2k</text>
+<line x1="139" y1="122" x2="139" y2="126" stroke="#566673" stroke-width="0.38"/>
+<line x1="137.0" y1="126" x2="141.0" y2="126" stroke="#566673" stroke-width="0.3"/>
+<line x1="137.65" y1="127.2" x2="140.35" y2="127.2" stroke="#566673" stroke-width="0.3"/>
+<line x1="138.4" y1="128.4" x2="139.6" y2="128.4" stroke="#566673" stroke-width="0.3"/>
+<text x="143" y="127.4" font-family="Helvetica,Arial,sans-serif" font-size="2.2" font-weight="normal" fill="#566673">GND</text>
+<text x="161" y="106" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#16698b">LCD_DC_3V3</text>
+<line x1="139" y1="110" x2="284" y2="110" stroke="#16698b" stroke-width="0.38"/>
+<text x="290" y="111" font-family="Helvetica,Arial,sans-serif" font-size="3.2" font-weight="bold" fill="#182b3a">D/C</text>
+<text x="334" y="120" font-family="Helvetica,Arial,sans-serif" font-size="2.25" font-weight="bold" fill="#b12935">PCB NET CONFLICT</text>
+<text x="18" y="133" font-family="Helvetica,Arial,sans-serif" font-size="3.6" font-weight="bold" fill="#182b3a">D11</text>
+<text x="18" y="138" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#566673">Nano D11</text>
+<text x="18" y="143" font-family="Helvetica,Arial,sans-serif" font-size="2.15" font-weight="normal" fill="#b12935">ISOLATE: L298N input 4</text>
+<line x1="80" y1="133" x2="104" y2="133" stroke="#16698b" stroke-width="0.38"/>
+<rect x="104" y="131.5" width="12" height="3" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="102" y="129" font-family="Helvetica,Arial,sans-serif" font-size="2.6" font-weight="normal" fill="#182b3a">R7  1k</text>
+<line x1="116" y1="133" x2="139" y2="133" stroke="#16698b" stroke-width="0.38"/>
+<circle cx="139" cy="133" r=".8" fill="#16698b"/>
+<line x1="139" y1="133" x2="139" y2="139" stroke="#16698b" stroke-width="0.38"/>
+<rect x="137.5" y="139" width="3" height="6" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="144" y="143" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#182b3a">R8  2k</text>
+<line x1="139" y1="145" x2="139" y2="149" stroke="#566673" stroke-width="0.38"/>
+<line x1="137.0" y1="149" x2="141.0" y2="149" stroke="#566673" stroke-width="0.3"/>
+<line x1="137.65" y1="150.2" x2="140.35" y2="150.2" stroke="#566673" stroke-width="0.3"/>
+<line x1="138.4" y1="151.4" x2="139.6" y2="151.4" stroke="#566673" stroke-width="0.3"/>
+<text x="143" y="150.4" font-family="Helvetica,Arial,sans-serif" font-size="2.2" font-weight="normal" fill="#566673">GND</text>
+<text x="161" y="129" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#16698b">SPI_MOSI_3V3</text>
+<line x1="139" y1="133" x2="259" y2="133" stroke="#16698b" stroke-width="0.38"/>
+<circle cx="259" cy="133" r=".8" fill="#16698b"/>
+<line x1="259" y1="130" x2="259" y2="136" stroke="#16698b" stroke-width="0.38"/>
+<line x1="259" y1="130" x2="284" y2="130" stroke="#16698b" stroke-width="0.38"/>
+<text x="290" y="131" font-family="Helvetica,Arial,sans-serif" font-size="3.1" font-weight="bold" fill="#182b3a">SDI (MOSI)</text>
+<line x1="259" y1="136" x2="284" y2="136" stroke="#16698b" stroke-width="0.38"/>
+<text x="290" y="137" font-family="Helvetica,Arial,sans-serif" font-size="3.1" font-weight="bold" fill="#182b3a">T_DIN</text>
+<text x="334" y="143" font-family="Helvetica,Arial,sans-serif" font-size="2.25" font-weight="bold" fill="#b12935">PCB NET CONFLICT</text>
+<text x="18" y="156" font-family="Helvetica,Arial,sans-serif" font-size="3.6" font-weight="bold" fill="#182b3a">D13</text>
+<text x="18" y="161" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#566673">Nano D13</text>
+<text x="18" y="166" font-family="Helvetica,Arial,sans-serif" font-size="2.15" font-weight="normal" fill="#566673">No load shown on PCB</text>
+<line x1="80" y1="156" x2="104" y2="156" stroke="#16698b" stroke-width="0.38"/>
+<rect x="104" y="154.5" width="12" height="3" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="102" y="152" font-family="Helvetica,Arial,sans-serif" font-size="2.6" font-weight="normal" fill="#182b3a">R9  1k</text>
+<line x1="116" y1="156" x2="139" y2="156" stroke="#16698b" stroke-width="0.38"/>
+<circle cx="139" cy="156" r=".8" fill="#16698b"/>
+<line x1="139" y1="156" x2="139" y2="162" stroke="#16698b" stroke-width="0.38"/>
+<rect x="137.5" y="162" width="3" height="6" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="144" y="166" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#182b3a">R10  2k</text>
+<line x1="139" y1="168" x2="139" y2="172" stroke="#566673" stroke-width="0.38"/>
+<line x1="137.0" y1="172" x2="141.0" y2="172" stroke="#566673" stroke-width="0.3"/>
+<line x1="137.65" y1="173.2" x2="140.35" y2="173.2" stroke="#566673" stroke-width="0.3"/>
+<line x1="138.4" y1="174.4" x2="139.6" y2="174.4" stroke="#566673" stroke-width="0.3"/>
+<text x="143" y="173.4" font-family="Helvetica,Arial,sans-serif" font-size="2.2" font-weight="normal" fill="#566673">GND</text>
+<text x="161" y="152" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#16698b">SPI_SCK_3V3</text>
+<line x1="139" y1="156" x2="259" y2="156" stroke="#16698b" stroke-width="0.38"/>
+<circle cx="259" cy="156" r=".8" fill="#16698b"/>
+<line x1="259" y1="153" x2="259" y2="159" stroke="#16698b" stroke-width="0.38"/>
+<line x1="259" y1="153" x2="284" y2="153" stroke="#16698b" stroke-width="0.38"/>
+<text x="290" y="154" font-family="Helvetica,Arial,sans-serif" font-size="3.1" font-weight="bold" fill="#182b3a">SCK</text>
+<line x1="259" y1="159" x2="284" y2="159" stroke="#16698b" stroke-width="0.38"/>
+<text x="290" y="160" font-family="Helvetica,Arial,sans-serif" font-size="3.1" font-weight="bold" fill="#182b3a">T_CLK</text>
+<text x="18" y="179" font-family="Helvetica,Arial,sans-serif" font-size="3.6" font-weight="bold" fill="#182b3a">D4</text>
+<text x="18" y="184" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#566673">ENCODER pin 3</text>
+<text x="18" y="189" font-family="Helvetica,Arial,sans-serif" font-size="2.15" font-weight="normal" fill="#b12935">Encoder must be unused</text>
+<line x1="80" y1="179" x2="104" y2="179" stroke="#16698b" stroke-width="0.38"/>
+<rect x="104" y="177.5" width="12" height="3" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="102" y="175" font-family="Helvetica,Arial,sans-serif" font-size="2.6" font-weight="normal" fill="#182b3a">R11  1k</text>
+<line x1="116" y1="179" x2="139" y2="179" stroke="#16698b" stroke-width="0.38"/>
+<circle cx="139" cy="179" r=".8" fill="#16698b"/>
+<line x1="139" y1="179" x2="139" y2="185" stroke="#16698b" stroke-width="0.38"/>
+<rect x="137.5" y="185" width="3" height="6" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="144" y="189" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#182b3a">R12  2k</text>
+<line x1="139" y1="191" x2="139" y2="195" stroke="#566673" stroke-width="0.38"/>
+<line x1="137.0" y1="195" x2="141.0" y2="195" stroke="#566673" stroke-width="0.3"/>
+<line x1="137.65" y1="196.2" x2="140.35" y2="196.2" stroke="#566673" stroke-width="0.3"/>
+<line x1="138.4" y1="197.4" x2="139.6" y2="197.4" stroke="#566673" stroke-width="0.3"/>
+<text x="143" y="196.4" font-family="Helvetica,Arial,sans-serif" font-size="2.2" font-weight="normal" fill="#566673">GND</text>
+<text x="161" y="175" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#16698b">TOUCH_CS_3V3</text>
+<line x1="139" y1="179" x2="284" y2="179" stroke="#16698b" stroke-width="0.38"/>
+<text x="290" y="180" font-family="Helvetica,Arial,sans-serif" font-size="3.2" font-weight="bold" fill="#182b3a">T_CS</text>
+<text x="18" y="211" font-family="Helvetica,Arial,sans-serif" font-size="3.5" font-weight="bold" fill="#182b3a">D12 / MISO</text>
+<text x="18" y="216" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#b12935">ISOLATE: A4988 EN x2</text>
+<text x="18" y="221" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#566673">Input only after isolation</text>
+<line x1="80" y1="211" x2="230" y2="211" stroke="#16698b" stroke-width="0.38"/>
+<circle cx="230" cy="211" r=".8" fill="#16698b"/>
+<line x1="230" y1="207" x2="230" y2="215" stroke="#16698b" stroke-width="0.38"/>
+<line x1="230" y1="207" x2="253" y2="207" stroke="#16698b" stroke-width="0.38"/>
+<line x1="253" y1="207" x2="258" y2="205" stroke="#b12935" stroke-width="0.45"/>
+<text x="252" y="203.5" font-family="Helvetica,Arial,sans-serif" font-size="2.2" font-weight="normal" fill="#b12935">JP3</text>
+<line x1="260" y1="207" x2="284" y2="207" stroke="#16698b" stroke-width="0.38"/>
+<text x="290" y="208" font-family="Helvetica,Arial,sans-serif" font-size="3" font-weight="bold" fill="#182b3a">SDO (MISO)</text>
+<line x1="230" y1="215" x2="253" y2="215" stroke="#16698b" stroke-width="0.38"/>
+<line x1="253" y1="215" x2="258" y2="213" stroke="#b12935" stroke-width="0.45"/>
+<text x="252" y="211.5" font-family="Helvetica,Arial,sans-serif" font-size="2.2" font-weight="normal" fill="#b12935">JP4</text>
+<line x1="260" y1="215" x2="284" y2="215" stroke="#16698b" stroke-width="0.38"/>
+<text x="290" y="216" font-family="Helvetica,Arial,sans-serif" font-size="3" font-weight="bold" fill="#182b3a">T_OUT (= T_DO)</text>
+<text x="163" y="223" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#b12935">JP3/JP4 OPEN until bus-release + input margins verified</text>
+<text x="18" y="232" font-family="Helvetica,Arial,sans-serif" font-size="3" font-weight="bold" fill="#182b3a">D2 / IRQ optional</text>
+<line x1="80" y1="232" x2="253" y2="232" stroke="#16698b" stroke-width="0.38" stroke-dasharray="2 1.3"/>
+<line x1="253" y1="232" x2="258" y2="230" stroke="#b12935" stroke-width="0.45"/>
+<text x="252" y="228.5" font-family="Helvetica,Arial,sans-serif" font-size="2.2" font-weight="normal" fill="#b12935">JP5</text>
+<line x1="260" y1="232" x2="284" y2="232" stroke="#16698b" stroke-width="0.38" stroke-dasharray="2 1.3"/>
+<text x="290" y="233" font-family="Helvetica,Arial,sans-serif" font-size="3" font-weight="normal" fill="#182b3a">T_IRQ (optional)</text>
+<text x="90" y="244" font-family="Helvetica,Arial,sans-serif" font-size="2.6" font-weight="normal" fill="#b12935">JP3-JP5 are commissioning links; drawn OPEN. No hidden direct connection across an open link.</text>
+<rect x="12" y="250" width="396" height="27" fill="#f3f7f9" stroke="#566673" stroke-width=".3"/>
+<text x="17" y="257" font-family="Helvetica,Arial,sans-serif" font-size="3" font-weight="bold" fill="#182b3a">POWER AND EXISTING MOTORS</text>
+<text x="17" y="264" font-family="Helvetica,Arial,sans-serif" font-size="2.8" font-weight="normal" fill="#182b3a">See Sheet 2 for 12V split, regulated 3.3V, common ground, VCC/backlight conditions and parts list.</text>
+<text x="17" y="271" font-family="Helvetica,Arial,sans-serif" font-size="2.6" font-weight="normal" fill="#182b3a">Keep MG90S on D5/D6 and A4988 STEP/DIR on A0-A3. SD-card pins unused. Do not load older D12-enable firmware.</text>
+<line x1="10" y1="284" x2="410" y2="284" stroke="#566673" stroke-width="0.35"/>
+<text x="12" y="290" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="bold" fill="#b12935">RRC-TFT-001 | Rev A | 20 Nov 2026 | A3 landscape | NOT RELEASED</text>
+<text x="316" y="290" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#566673">Sheet 1/2 | Dots = junctions; same net names connect</text>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297"><rect width="420" height="297" fill="white"/>
+<text x="12" y="15" font-family="Helvetica,Arial,sans-serif" font-size="6" font-weight="bold" fill="#182b3a">POWER, PARTS &amp; RELEASE CHECKS</text>
+<text x="12" y="23" font-family="Helvetica,Arial,sans-serif" font-size="2.9" font-weight="normal" fill="#566673">Read with Sheet 1 | Wiring is conditional; no actual controller identity or module power configuration is assumed</text>
+<rect x="12" y="33" width="52" height="22" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="17" y="42" font-family="Helvetica,Arial,sans-serif" font-size="3.4" font-weight="bold" fill="#182b3a">12V DC SUPPLY</text>
+<text x="17" y="49" font-family="Helvetica,Arial,sans-serif" font-size="2.6" font-weight="normal" fill="#182b3a">Existing machine supply</text>
+<line x1="64" y1="40" x2="89" y2="40" stroke="#b12935" stroke-width="0.38"/>
+<circle cx="89" cy="40" r=".8" fill="#16698b"/>
+<line x1="89" y1="40" x2="89" y2="63" stroke="#b12935" stroke-width="0.38"/>
+<line x1="89" y1="63" x2="111" y2="63" stroke="#b12935" stroke-width="0.38"/>
+<rect x="111" y="54" width="65" height="22" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="116" y="63" font-family="Helvetica,Arial,sans-serif" font-size="3" font-weight="bold" fill="#182b3a">MR INNOVATIVE PCB</text>
+<text x="116" y="70" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#182b3a">Existing 12V input</text>
+<line x1="89" y1="40" x2="198" y2="40" stroke="#b12935" stroke-width="0.38"/>
+<rect x="198" y="32" width="78" height="25" fill="white" stroke="#182b3a" stroke-width=".3"/>
+<text x="203" y="40" font-family="Helvetica,Arial,sans-serif" font-size="3" font-weight="bold" fill="#182b3a">COMPLETE BUCK MODULE</text>
+<text x="203" y="46" font-family="Helvetica,Arial,sans-serif" font-size="2.8" font-weight="normal" fill="#182b3a">12V in / 3.3V out</text>
+<text x="203" y="52" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#182b3a">&gt;=500mA continuous; verify load</text>
+<line x1="276" y1="40" x2="290" y2="40" stroke="#14735b" stroke-width="0.38"/>
+<circle cx="290" cy="40" r=".8" fill="#16698b"/>
+<line x1="290" y1="40" x2="314" y2="40" stroke="#14735b" stroke-width="0.38"/>
+<line x1="314" y1="40" x2="319" y2="38" stroke="#b12935" stroke-width="0.45"/>
+<text x="313" y="36.5" font-family="Helvetica,Arial,sans-serif" font-size="2.2" font-weight="normal" fill="#b12935">JP1</text>
+<line x1="321" y1="40" x2="343" y2="40" stroke="#14735b" stroke-width="0.38"/>
+<text x="347" y="41" font-family="Helvetica,Arial,sans-serif" font-size="3" font-weight="bold" fill="#182b3a">TFT VCC</text>
+<line x1="290" y1="40" x2="290" y2="64" stroke="#14735b" stroke-width="0.38"/>
+<line x1="290" y1="64" x2="314" y2="64" stroke="#14735b" stroke-width="0.38"/>
+<line x1="314" y1="64" x2="319" y2="62" stroke="#b12935" stroke-width="0.45"/>
+<text x="313" y="60.5" font-family="Helvetica,Arial,sans-serif" font-size="2.2" font-weight="normal" fill="#b12935">JP2</text>
+<line x1="321" y1="64" x2="343" y2="64" stroke="#14735b" stroke-width="0.38"/>
+<text x="347" y="65" font-family="Helvetica,Arial,sans-serif" font-size="3" font-weight="bold" fill="#182b3a">TFT LED</text>
+<text x="296" y="49" font-family="Helvetica,Arial,sans-serif" font-size="2.4" font-weight="normal" fill="#b12935">JP1: VCC verified first</text>
+<text x="296" y="73" font-family="Helvetica,Arial,sans-serif" font-size="2.4" font-weight="normal" fill="#b12935">JP2: backlight verified first</text>
+<text x="12" y="84" font-family="Helvetica,Arial,sans-serif" font-size="2.8" font-weight="bold" fill="#182b3a">GND: supply negative + PCB/Nano ground + buck VIN-/VOUT- + TFT GND + every divider lower end.</text>
+<text x="12" y="90" font-family="Helvetica,Arial,sans-serif" font-size="2.6" font-weight="normal" fill="#182b3a">C1 100nF and C2 10uF connect across TFT VCC/GND near the header. Do not join 3.3V to Nano 5V or servo power.</text>
+<text x="12" y="102" font-family="Helvetica,Arial,sans-serif" font-size="3.5" font-weight="bold" fill="#b12935">A. PCB PIN CONFLICTS</text>
+<text x="12" y="109" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">D7/D8/D10/D11 already feed the L298N inputs.</text>
+<text x="12" y="113.3" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Hardware SPI will toggle the L298N unless these nets are isolated.</text>
+<text x="12" y="117.6" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">D12 feeds BOTH A4988 enable inputs; it cannot remain on that net</text>
+<text x="12" y="121.89999999999999" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">while serving as MISO. Driving D12 HIGH in the old sketch conflicts.</text>
+<text x="12" y="126.19999999999999" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Isolate the Nano side from both enables; preserve independent</text>
+<text x="12" y="130.5" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">driver enable control with a suitable pull-up / reassigned control.</text>
+<text x="12" y="134.8" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Motor unplugging alone does not isolate these logic connections.</text>
+<text x="12" y="139.10000000000002" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Removing power from an IC alone can cause signal back-powering.</text>
+<text x="12" y="143.40000000000003" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">D4/D2: leave encoder unplugged. D0/D1: preserve USB Serial.</text>
+<text x="12" y="147.70000000000005" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">D5/D6: keep cutter servos. A0-A3: keep step/dir connections.</text>
+<text x="12" y="152.00000000000006" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">This hardware-SPI map is NOT approved on an unmodified PCB.</text>
+<text x="218" y="102" font-family="Helvetica,Arial,sans-serif" font-size="3.5" font-weight="bold" fill="#182b3a">B. DIVIDER VOLTAGE CHECK</text>
+<text x="218" y="109" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Rupper=1k; Rlower=2k. Nominal: 5.00 x 2/3 = 3.333V.</text>
+<text x="218" y="113.3" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Assumed high=5.25V, resistors +/-1%: worst case 3.523V.</text>
+<text x="218" y="117.6" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">At +/-5% resistance tolerance: worst case 3.615V.</text>
+<text x="218" y="121.89999999999999" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">ILI9341 example: recommended input HIGH &lt;= VDDI;</text>
+<text x="218" y="126.19999999999999" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">absolute maximum is VDDI+0.3V. Absolute max is not a target.</text>
+<text x="218" y="130.5" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">At VDDI=3.30V, even nominal 3.333V exceeds the stated</text>
+<text x="218" y="134.8" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">recommended ceiling. At lower VDDI, margin is smaller.</text>
+<text x="218" y="139.10000000000002" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Therefore 1k/2k dividers are shown as requested, NOT approved</text>
+<text x="218" y="143.40000000000003" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">for a guaranteed-compliant interface. Verify actual IC specs.</text>
+<text x="218" y="147.70000000000005" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Recommended: SN74LVC245A at TFT logic 3.3V; 5.5V-tolerant</text>
+<text x="218" y="152.00000000000006" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">inputs; DIR=HIGH for A-&gt;B, /OE=LOW; 100nF decoupling.</text>
+<text x="12" y="165" font-family="Helvetica,Arial,sans-serif" font-size="3.5" font-weight="bold" fill="#182b3a">C. POWER AND RETURN SIGNALS</text>
+<text x="12" y="172" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Read U1 marking and inspect J1 on the actual TFT before power-up.</text>
+<text x="12" y="176.3" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">3.3V at VCC may require bypassing its onboard regulator.</text>
+<text x="12" y="180.60000000000002" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Do not bridge J1 by guesswork. Measure the actual logic rail.</text>
+<text x="12" y="184.90000000000003" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">LED needs confirmed current limiting / a suitable driver.</text>
+<text x="12" y="189.20000000000005" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Do not drive the backlight from a Nano GPIO.</text>
+<text x="12" y="193.50000000000006" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Direct 3.3V MISO/IRQ to 5V AVR is conditional: verify VOH &gt;=</text>
+<text x="12" y="197.80000000000007" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">AVR VIH (typically 0.6 x VCC for these pins). A 3.3V rail alone</text>
+<text x="12" y="202.10000000000008" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">does not guarantee VOH. Use a 5V AHCT input buffer if needed.</text>
+<text x="12" y="206.4000000000001" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Verify both chips release MISO when deselected before JP3+JP4.</text>
+<text x="12" y="210.7000000000001" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">If not, leave display SDO open and use touch-only readback.</text>
+<text x="12" y="215.0000000000001" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">Identify actual LCD / touch IC before selecting software libraries.</text>
+<text x="218" y="165" font-family="Helvetica,Arial,sans-serif" font-size="3.5" font-weight="bold" fill="#182b3a">D. PARTS FOR THE CONDITIONAL DIVIDER DESIGN</text>
+<text x="218" y="172" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">6 x 1k ohm, 1%, &gt;=0.125W (R1/R3/R5/R7/R9/R11).</text>
+<text x="218" y="176.3" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">6 x 2k ohm, 1%, &gt;=0.125W (R2/R4/R6/R8/R10/R12).</text>
+<text x="218" y="180.60000000000002" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">1 x complete regulated 3.3V buck module, &gt;=500mA continuous,</text>
+<text x="218" y="184.90000000000003" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">     rated for 12V input; size for measured display+backlight load.</text>
+<text x="218" y="189.20000000000005" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">1 x 100nF ceramic + 1 x 10uF capacitor, &gt;=10V, near TFT.</text>
+<text x="218" y="193.50000000000006" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">5 x optional commissioning links, breadboard, short jumpers,</text>
+<text x="218" y="197.80000000000007" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">     multimeter; scope / logic analyser for SPI integrity checks.</text>
+<text x="218" y="202.10000000000008" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">AP63203QWU-7 is a regulator IC, NOT a ready-to-wire module.</text>
+<text x="218" y="206.4000000000001" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">For a custom buck PCB, follow the current Diodes reference</text>
+<text x="218" y="210.7000000000001" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">design: inductor, input/output/bootstrap capacitors, FB/EN</text>
+<text x="218" y="215.0000000000001" font-family="Helvetica,Arial,sans-serif" font-size="2.55" font-weight="normal" fill="#182b3a">connections and switching-loop layout. Do not breadboard it.</text>
+<rect x="12" y="225" width="396" height="29" fill="#fff2f0" stroke="#b12935" stroke-width=".3"/>
+<text x="16" y="232" font-family="Helvetica,Arial,sans-serif" font-size="2.65" font-weight="normal" fill="#b12935">RELEASE CHECKS: photograph/identify ICs and jumpers; confirm PCB isolation by continuity; resolve level shifting both directions;</text>
+<text x="16" y="239" font-family="Helvetica,Arial,sans-serif" font-size="2.65" font-weight="normal" fill="#b12935">verify VCC/backlight arrangement; verify shared-MISO release; check 3.3V polarity/voltage under load before closing JP1/JP2.</text>
+<text x="16" y="246" font-family="Helvetica,Arial,sans-serif" font-size="2.65" font-weight="normal" fill="#b12935">First display test: isolate actuators; start SPI slowly and inspect waveforms. Then integrate with the working cutter firmware.</text>
+<text x="12" y="262" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#566673">Sources: original MR Innovative multipurpose schematic (Rev 1.0, 2021-01-22); ILI9341 manufacturer datasheet Sections 18.1/18.2;</text>
+<text x="12" y="267" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="normal" fill="#566673">TI SN74LVC245A product/datasheet; Diodes AP63203Q product and AP63203QWU-EVM guide. Full URLs and calculations in handoff-notes.md.</text>
+<line x1="10" y1="284" x2="410" y2="284" stroke="#566673" stroke-width="0.35"/>
+<text x="12" y="290" font-family="Helvetica,Arial,sans-serif" font-size="2.5" font-weight="bold" fill="#b12935">RRC-TFT-001 | Rev A | 20 Nov 2026 | A3 landscape | NOT RELEASED</text>
+<text x="316" y="290" font-family="Helvetica,Arial,sans-serif" font-size="2.3" font-weight="normal" fill="#566673">Sheet 2/2 | Dots = junctions; same net names connect</text>
+</svg>

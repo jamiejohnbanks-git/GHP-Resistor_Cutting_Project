@@ -1,0 +1,307 @@
+{
+  "title": "Nano / KMRTM24024-SPI conditional hardware-SPI interface",
+  "revision": "A",
+  "status": "NOT RELEASED FOR WIRING OR POWER-UP",
+  "netlist": {
+    "LCD_CS_5V": [
+      "NANO.D10",
+      "R1.1"
+    ],
+    "LCD_CS_3V3": [
+      "R1.2",
+      "R2.1",
+      "TFT.CS"
+    ],
+    "GND": [
+      "R2.2",
+      "R4.2",
+      "R6.2",
+      "R8.2",
+      "R10.2",
+      "R12.2",
+      "SUPPLY.-",
+      "PCB.GND",
+      "NANO.GND",
+      "BUCK.VIN-",
+      "BUCK.VOUT-",
+      "TFT.GND",
+      "C1.2",
+      "C2.2"
+    ],
+    "LCD_RST_5V": [
+      "NANO.D7",
+      "R3.1"
+    ],
+    "LCD_RST_3V3": [
+      "R3.2",
+      "R4.1",
+      "TFT.RESET"
+    ],
+    "LCD_DC_5V": [
+      "NANO.D8",
+      "R5.1"
+    ],
+    "LCD_DC_3V3": [
+      "R5.2",
+      "R6.1",
+      "TFT.D/C"
+    ],
+    "SPI_MOSI_5V": [
+      "NANO.D11",
+      "R7.1"
+    ],
+    "SPI_MOSI_3V3": [
+      "R7.2",
+      "R8.1",
+      "TFT.SDI (MOSI)",
+      "TFT.T_DIN"
+    ],
+    "SPI_SCK_5V": [
+      "NANO.D13",
+      "R9.1"
+    ],
+    "SPI_SCK_3V3": [
+      "R9.2",
+      "R10.1",
+      "TFT.SCK",
+      "TFT.T_CLK"
+    ],
+    "TOUCH_CS_5V": [
+      "NANO.D4",
+      "R11.1"
+    ],
+    "TOUCH_CS_3V3": [
+      "R11.2",
+      "R12.1",
+      "TFT.T_CS"
+    ],
+    "SPI_MISO": [
+      "NANO.D12",
+      "JP3.1",
+      "JP4.1"
+    ],
+    "LCD_SDO": [
+      "JP3.2",
+      "TFT.SDO (MISO)"
+    ],
+    "TOUCH_DO": [
+      "JP4.2",
+      "TFT.T_OUT"
+    ],
+    "TOUCH_IRQ_OPTIONAL": [
+      "NANO.D2",
+      "JP5.1"
+    ],
+    "TOUCH_IRQ": [
+      "JP5.2",
+      "TFT.T_IRQ"
+    ],
+    "12V": [
+      "SUPPLY.+",
+      "PCB.12V_IN",
+      "BUCK.VIN+"
+    ],
+    "3V3": [
+      "BUCK.VOUT+",
+      "JP1.1",
+      "JP2.1"
+    ],
+    "TFT_VCC": [
+      "JP1.2",
+      "TFT.VCC",
+      "C1.1",
+      "C2.1"
+    ],
+    "BACKLIGHT_SUPPLY": [
+      "JP2.2",
+      "TFT.LED"
+    ]
+  },
+  "components": [
+    {
+      "ref": "R1",
+      "value_ohms": 1000,
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R2",
+      "value_ohms": 2000,
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R3",
+      "value_ohms": 1000,
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R4",
+      "value_ohms": 2000,
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R5",
+      "value_ohms": 1000,
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R6",
+      "value_ohms": 2000,
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R7",
+      "value_ohms": 1000,
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R8",
+      "value_ohms": 2000,
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R9",
+      "value_ohms": 1000,
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R10",
+      "value_ohms": 2000,
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R11",
+      "value_ohms": 1000,
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R12",
+      "value_ohms": 2000,
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "JP1",
+      "type": "normally-open commissioning link"
+    },
+    {
+      "ref": "JP2",
+      "type": "normally-open commissioning link"
+    },
+    {
+      "ref": "JP3",
+      "type": "normally-open commissioning link"
+    },
+    {
+      "ref": "JP4",
+      "type": "normally-open commissioning link"
+    },
+    {
+      "ref": "JP5",
+      "type": "normally-open commissioning link"
+    },
+    {
+      "ref": "C1",
+      "value": "100nF ceramic, >=10V"
+    },
+    {
+      "ref": "C2",
+      "value": "10uF, >=10V; polarity as marked"
+    },
+    {
+      "ref": "BUCK",
+      "value": "Complete 12V-input / 3.3V-output module, >=500mA continuous"
+    }
+  ],
+  "channels": [
+    {
+      "pin": "D10",
+      "name": "LCD_CS",
+      "dest": [
+        "CS"
+      ],
+      "y": 64,
+      "conflict": "L298N input 3",
+      "header": "Nano D10",
+      "upper": "R1",
+      "lower": "R2"
+    },
+    {
+      "pin": "D7",
+      "name": "LCD_RST",
+      "dest": [
+        "RESET"
+      ],
+      "y": 87,
+      "conflict": "L298N input 1",
+      "header": "Nano D7",
+      "upper": "R3",
+      "lower": "R4"
+    },
+    {
+      "pin": "D8",
+      "name": "LCD_DC",
+      "dest": [
+        "D/C"
+      ],
+      "y": 110,
+      "conflict": "L298N input 2",
+      "header": "Nano D8",
+      "upper": "R5",
+      "lower": "R6"
+    },
+    {
+      "pin": "D11",
+      "name": "SPI_MOSI",
+      "dest": [
+        "SDI (MOSI)",
+        "T_DIN"
+      ],
+      "y": 133,
+      "conflict": "L298N input 4",
+      "header": "Nano D11",
+      "upper": "R7",
+      "lower": "R8"
+    },
+    {
+      "pin": "D13",
+      "name": "SPI_SCK",
+      "dest": [
+        "SCK",
+        "T_CLK"
+      ],
+      "y": 156,
+      "conflict": null,
+      "header": "Nano D13",
+      "upper": "R9",
+      "lower": "R10"
+    },
+    {
+      "pin": "D4",
+      "name": "TOUCH_CS",
+      "dest": [
+        "T_CS"
+      ],
+      "y": 179,
+      "conflict": "Encoder header if occupied",
+      "header": "ENCODER pin 3",
+      "upper": "R11",
+      "lower": "R12"
+    }
+  ],
+  "links": {
+    "JP1": "Close only after validating module VCC and 3.3V regulator bypass arrangement",
+    "JP2": "Close only after validating backlight voltage and current limiting",
+    "JP3": "Display SDO: close only if tri-state and return voltage margins verified",
+    "JP4": "Touch T_OUT: close only if tri-state and return voltage margins verified",
+    "JP5": "Optional interrupt: close only after voltage and pull-up verification"
+  },
+  "unresolved": [
+    "Actual LCD / touch controller identity",
+    "D7/D8/D10/D11 isolation from L298N",
+    "D12 isolation from both A4988 enable inputs",
+    "TFT VCC regulator/jumper configuration",
+    "Backlight current limiting",
+    "Divider recommended operating voltage compliance",
+    "AVR input-high margin on 3.3V return signals",
+    "Shared MISO high-impedance behavior"
+  ]
+}
