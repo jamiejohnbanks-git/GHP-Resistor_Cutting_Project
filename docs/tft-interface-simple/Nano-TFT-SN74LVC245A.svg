@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297"><rect width="420" height="297" fill="white"/>
+<text x="12" y="15" font-family="Arial,sans-serif" font-size="6" font-weight="700" fill="#173145">NANO TO TFT - SN74LVC245A</text>
+<text x="12" y="23" font-family="Arial,sans-serif" font-size="3" font-weight="400" fill="#173145">Software SPI | DIP20 pin numbers | No resistor voltage dividers | Signal diagram, not a motor or regulator schematic</text>
+<rect x="12" y="29" width="396" height="11" fill="none" stroke="#ad2935" stroke-width=".3"/>
+<text x="16" y="36" font-family="Arial,sans-serif" font-size="3.1" font-weight="700" fill="#ad2935">Keep motor wiring unchanged. TFT VCC / LED power and installed chip identities still require the checks below.</text>
+<rect x="12" y="46" width="76" height="130" fill="none" stroke="#173145" stroke-width=".3"/>
+<rect x="135" y="46" width="110" height="130" fill="none" stroke="#173145" stroke-width=".3"/>
+<rect x="307" y="46" width="101" height="130" fill="none" stroke="#173145" stroke-width=".3"/>
+<text x="17" y="54" font-family="Arial,sans-serif" font-size="3.6" font-weight="700" fill="#173145">NANO / MR PCB</text>
+<text x="142" y="54" font-family="Arial,sans-serif" font-size="3.7" font-weight="700" fill="#173145">U1  SN74LVC245A</text>
+<text x="142" y="60" font-family="Arial,sans-serif" font-size="2.65" font-weight="400" fill="#173145">5V-tolerant A inputs -&gt; 3.3V B outputs</text>
+<text x="313" y="54" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">ILI9341 TFT + TOUCH</text>
+<text x="18" y="68" font-family="Arial,sans-serif" font-size="3.6" font-weight="700" fill="#173145">D13</text>
+<text x="18" y="73" font-family="Arial,sans-serif" font-size="2.65" font-weight="400" fill="#173145">Nano pin</text>
+<line x1="88" y1="68" x2="135" y2="68" stroke="#166b90" stroke-width=".4"/>
+<text x="140" y="69" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">2  A1</text>
+<text x="176" y="69" font-family="Arial,sans-serif" font-size="3" font-weight="400" fill="#166b90">---&gt;</text>
+<text x="217" y="69" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">B1  18</text>
+<line x1="245" y1="68" x2="286" y2="68" stroke="#166b90" stroke-width=".4"/>
+<circle cx="286" cy="68" r=".75" fill="#166b90"/>
+<line x1="286" y1="65" x2="286" y2="71" stroke="#166b90" stroke-width=".4"/>
+<line x1="286" y1="65" x2="307" y2="65" stroke="#166b90" stroke-width=".4"/>
+<text x="313" y="66" font-family="Arial,sans-serif" font-size="3.15" font-weight="700" fill="#173145">SCK</text>
+<line x1="286" y1="71" x2="307" y2="71" stroke="#166b90" stroke-width=".4"/>
+<text x="313" y="72" font-family="Arial,sans-serif" font-size="3.15" font-weight="700" fill="#173145">T_CLK</text>
+<text x="18" y="88" font-family="Arial,sans-serif" font-size="3.6" font-weight="700" fill="#173145">D3</text>
+<text x="18" y="93" font-family="Arial,sans-serif" font-size="2.65" font-weight="400" fill="#173145">ENCODER pin 5</text>
+<line x1="88" y1="88" x2="135" y2="88" stroke="#166b90" stroke-width=".4"/>
+<text x="140" y="89" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">3  A2</text>
+<text x="176" y="89" font-family="Arial,sans-serif" font-size="3" font-weight="400" fill="#166b90">---&gt;</text>
+<text x="217" y="89" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">B2  17</text>
+<line x1="245" y1="88" x2="286" y2="88" stroke="#166b90" stroke-width=".4"/>
+<circle cx="286" cy="88" r=".75" fill="#166b90"/>
+<line x1="286" y1="85" x2="286" y2="91" stroke="#166b90" stroke-width=".4"/>
+<line x1="286" y1="85" x2="307" y2="85" stroke="#166b90" stroke-width=".4"/>
+<text x="313" y="86" font-family="Arial,sans-serif" font-size="3.15" font-weight="700" fill="#173145">SDI / MOSI</text>
+<line x1="286" y1="91" x2="307" y2="91" stroke="#166b90" stroke-width=".4"/>
+<text x="313" y="92" font-family="Arial,sans-serif" font-size="3.15" font-weight="700" fill="#173145">T_DIN</text>
+<text x="18" y="108" font-family="Arial,sans-serif" font-size="3.6" font-weight="700" fill="#173145">A4</text>
+<text x="18" y="113" font-family="Arial,sans-serif" font-size="2.65" font-weight="400" fill="#173145">I2C pin 3</text>
+<line x1="88" y1="108" x2="135" y2="108" stroke="#166b90" stroke-width=".4"/>
+<text x="140" y="109" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">4  A3</text>
+<text x="176" y="109" font-family="Arial,sans-serif" font-size="3" font-weight="400" fill="#166b90">---&gt;</text>
+<text x="217" y="109" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">B3  16</text>
+<line x1="245" y1="108" x2="307" y2="108" stroke="#166b90" stroke-width=".4"/>
+<text x="313" y="109" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">CS</text>
+<circle cx="110" cy="108" r=".75" fill="#166b90"/>
+<line x1="110" y1="108" x2="110" y2="102" stroke="#166b90" stroke-width=".4"/>
+<rect x="108.5" y="96" width="3" height="6" fill="none" stroke="#173145" stroke-width=".3"/>
+<line x1="110" y1="96" x2="110" y2="93" stroke="#126d53" stroke-width=".4"/>
+<text x="114" y="99" font-family="Arial,sans-serif" font-size="2.5" font-weight="400" fill="#173145">R1 10k</text>
+<text x="114" y="93" font-family="Arial,sans-serif" font-size="2.4" font-weight="400" fill="#126d53">Nano 5V</text>
+<text x="18" y="128" font-family="Arial,sans-serif" font-size="3.6" font-weight="700" fill="#173145">A5</text>
+<text x="18" y="133" font-family="Arial,sans-serif" font-size="2.65" font-weight="400" fill="#173145">I2C pin 4</text>
+<line x1="88" y1="128" x2="135" y2="128" stroke="#166b90" stroke-width=".4"/>
+<text x="140" y="129" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">5  A4</text>
+<text x="176" y="129" font-family="Arial,sans-serif" font-size="3" font-weight="400" fill="#166b90">---&gt;</text>
+<text x="217" y="129" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">B4  15</text>
+<line x1="245" y1="128" x2="307" y2="128" stroke="#166b90" stroke-width=".4"/>
+<text x="313" y="129" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">D/C</text>
+<text x="18" y="148" font-family="Arial,sans-serif" font-size="3.6" font-weight="700" fill="#173145">D4</text>
+<text x="18" y="153" font-family="Arial,sans-serif" font-size="2.65" font-weight="400" fill="#173145">ENCODER pin 3</text>
+<line x1="88" y1="148" x2="135" y2="148" stroke="#166b90" stroke-width=".4"/>
+<text x="140" y="149" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">6  A5</text>
+<text x="176" y="149" font-family="Arial,sans-serif" font-size="3" font-weight="400" fill="#166b90">---&gt;</text>
+<text x="217" y="149" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">B5  14</text>
+<line x1="245" y1="148" x2="307" y2="148" stroke="#166b90" stroke-width=".4"/>
+<text x="313" y="149" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">T_CS</text>
+<circle cx="110" cy="148" r=".75" fill="#166b90"/>
+<line x1="110" y1="148" x2="110" y2="142" stroke="#166b90" stroke-width=".4"/>
+<rect x="108.5" y="136" width="3" height="6" fill="none" stroke="#173145" stroke-width=".3"/>
+<line x1="110" y1="136" x2="110" y2="133" stroke="#126d53" stroke-width=".4"/>
+<text x="114" y="139" font-family="Arial,sans-serif" font-size="2.5" font-weight="400" fill="#173145">R2 10k</text>
+<text x="114" y="133" font-family="Arial,sans-serif" font-size="2.4" font-weight="400" fill="#126d53">Nano 5V</text>
+<text x="18" y="168" font-family="Arial,sans-serif" font-size="3.6" font-weight="700" fill="#173145">RESET</text>
+<text x="18" y="173" font-family="Arial,sans-serif" font-size="2.65" font-weight="400" fill="#173145">Nano RESET pin</text>
+<line x1="88" y1="168" x2="135" y2="168" stroke="#166b90" stroke-width=".4"/>
+<text x="140" y="169" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">7  A6</text>
+<text x="176" y="169" font-family="Arial,sans-serif" font-size="3" font-weight="400" fill="#166b90">---&gt;</text>
+<text x="217" y="169" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">B6  13</text>
+<line x1="245" y1="168" x2="307" y2="168" stroke="#166b90" stroke-width=".4"/>
+<text x="313" y="169" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">RESET</text>
+<text x="12" y="185" font-family="Arial,sans-serif" font-size="3.1" font-weight="700" fill="#173145">TOUCH DATA RETURNS TO NANO THROUGH A SEPARATE 5V BUFFER</text>
+<rect x="135" y="190" width="110" height="20" fill="none" stroke="#173145" stroke-width=".3"/>
+<text x="143" y="197" font-family="Arial,sans-serif" font-size="3.1" font-weight="700" fill="#173145">U2  SN74AHCT125 (DIP14)</text>
+<text x="140" y="205" font-family="Arial,sans-serif" font-size="3.2" font-weight="700" fill="#173145">3  1Y   &lt;---   1A  2</text>
+<line x1="88" y1="203" x2="135" y2="203" stroke="#166b90" stroke-width=".4"/>
+<text x="18" y="204" font-family="Arial,sans-serif" font-size="3.1" font-weight="700" fill="#173145">D2 / ENCODER pin 4</text>
+<line x1="245" y1="203" x2="307" y2="203" stroke="#166b90" stroke-width=".4"/>
+<text x="313" y="204" font-family="Arial,sans-serif" font-size="3.3" font-weight="700" fill="#173145">T_OUT</text>
+<rect x="12" y="217" width="193" height="52" fill="none" stroke="#173145" stroke-width=".3"/>
+<rect x="213" y="217" width="195" height="52" fill="none" stroke="#173145" stroke-width=".3"/>
+<text x="17" y="224" font-family="Arial,sans-serif" font-size="3" font-weight="700" fill="#ad2935">U1 POWER AND CONTROL - DO NOT APPLY 5V TO PIN 20</text>
+<text x="17" y="231" font-family="Arial,sans-serif" font-size="2.7" font-weight="400" fill="#173145">Pin 20 (VCC) -&gt; regulated 3.3V; pin 1 (DIR) -&gt; 3.3V.</text>
+<text x="17" y="237" font-family="Arial,sans-serif" font-size="2.7" font-weight="400" fill="#173145">Pins 10 (GND) and 19 (/OE) -&gt; common GND.</text>
+<text x="17" y="243" font-family="Arial,sans-serif" font-size="2.7" font-weight="400" fill="#173145">C1: 100nF directly between pins 20 and 10.</text>
+<text x="17" y="249" font-family="Arial,sans-serif" font-size="2.7" font-weight="400" fill="#173145">Unused inputs 8, 9 -&gt; GND; outputs 11, 12 unconnected.</text>
+<text x="17" y="255" font-family="Arial,sans-serif" font-size="2.7" font-weight="400" fill="#173145">R1/R2 above hold both CS inputs HIGH during Nano reset.</text>
+<text x="17" y="261" font-family="Arial,sans-serif" font-size="2.7" font-weight="400" fill="#173145">Logical symbol, NOT physical package view: locate pin 1 by notch/dot.</text>
+<text x="218" y="224" font-family="Arial,sans-serif" font-size="3" font-weight="700" fill="#173145">U2 POWER / UNUSED CHANNELS AND TFT POWER</text>
+<text x="218" y="231" font-family="Arial,sans-serif" font-size="2.7" font-weight="400" fill="#173145">Pin 14 -&gt; Nano 5V; pins 7 (GND), 1 (/OE) -&gt; GND.</text>
+<text x="218" y="237" font-family="Arial,sans-serif" font-size="2.7" font-weight="400" fill="#173145">C2: 100nF directly between pins 14 and 7.</text>
+<text x="218" y="243" font-family="Arial,sans-serif" font-size="2.7" font-weight="400" fill="#173145">Unused /OE 4,10,13 -&gt; 5V; inputs 5,9,12 -&gt; GND;</text>
+<text x="218" y="249" font-family="Arial,sans-serif" font-size="2.7" font-weight="400" fill="#173145">unused outputs 6,8,11 unconnected. Do not substitute HC125.</text>
+<text x="218" y="255" font-family="Arial,sans-serif" font-size="2.7" font-weight="400" fill="#173145">TFT GND -&gt; common GND. VCC: regulated 5V, verify U1/J1 on TFT.</text>
+<text x="218" y="261" font-family="Arial,sans-serif" font-size="2.7" font-weight="400" fill="#173145">LED: leave open until current limiting/supply confirmed.</text>
+<text x="12" y="277" font-family="Arial,sans-serif" font-size="2.85" font-weight="400" fill="#173145">Leave TFT SDO/MISO, T_IRQ and SD-card pins open. Encoder/I2C devices unplugged. Power together; verify reset sequencing.</text>
+<text x="12" y="283" font-family="Arial,sans-serif" font-size="2.65" font-weight="400" fill="#173145">3.3V source: complete AP63203QWU-7 circuit or regulated module. Keep D5/D6, A0-A3 and D7-D12 on their existing motor functions.</text>
+<text x="12" y="291" font-family="Arial,sans-serif" font-size="2.65" font-weight="700" fill="#ad2935">RRC-TFT-002 Rev A | 26 Nov 2026 | New software-SPI map: replaces earlier hardware-SPI proposal | Confirm actual IC package markings.</text>
+</svg>

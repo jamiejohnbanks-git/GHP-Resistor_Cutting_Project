@@ -1,0 +1,372 @@
+{
+  "nets": {
+    "CLOCK_5V": [
+      "NANO.D13",
+      "U1.2"
+    ],
+    "CLOCK_3V3": [
+      "U1.18",
+      "TFT.SCK",
+      "TFT.T_CLK"
+    ],
+    "MOSI_5V": [
+      "NANO.D3",
+      "U1.3"
+    ],
+    "MOSI_3V3": [
+      "U1.17",
+      "TFT.SDI / MOSI",
+      "TFT.T_DIN"
+    ],
+    "LCD_CS_5V": [
+      "NANO.A4",
+      "U1.4",
+      "R1.2"
+    ],
+    "LCD_CS_3V3": [
+      "U1.16",
+      "TFT.CS"
+    ],
+    "DC_5V": [
+      "NANO.A5",
+      "U1.5"
+    ],
+    "DC_3V3": [
+      "U1.15",
+      "TFT.D/C"
+    ],
+    "TOUCH_CS_5V": [
+      "NANO.D4",
+      "U1.6",
+      "R2.2"
+    ],
+    "TOUCH_CS_3V3": [
+      "U1.14",
+      "TFT.T_CS"
+    ],
+    "RESET_5V": [
+      "NANO.RESET",
+      "U1.7"
+    ],
+    "RESET_3V3": [
+      "U1.13",
+      "TFT.RESET"
+    ],
+    "TOUCH_3V3": [
+      "TFT.T_OUT",
+      "U2.2"
+    ],
+    "TOUCH_5V": [
+      "U2.3",
+      "NANO.D2"
+    ],
+    "3V3": [
+      "REGULATOR.3V3",
+      "U1.20",
+      "U1.1",
+      "C1.1"
+    ],
+    "5V": [
+      "NANO.5V",
+      "U2.14",
+      "U2.4",
+      "U2.10",
+      "U2.13",
+      "C2.1",
+      "R1.1",
+      "R2.1"
+    ],
+    "GND": [
+      "NANO.GND",
+      "TFT.GND",
+      "REGULATOR.GND",
+      "U1.10",
+      "U1.19",
+      "U1.8",
+      "U1.9",
+      "C1.2",
+      "U2.7",
+      "U2.1",
+      "U2.5",
+      "U2.9",
+      "U2.12",
+      "C2.2"
+    ],
+    "TFT_VCC_CONDITIONAL": [
+      "REGULATED_5V.OUT",
+      "TFT.VCC"
+    ]
+  },
+  "drawn_segments": [
+    {
+      "net": "CLOCK_5V",
+      "a": [
+        88,
+        68
+      ],
+      "b": [
+        135,
+        68
+      ]
+    },
+    {
+      "net": "CLOCK_3V3",
+      "a": [
+        245,
+        68
+      ],
+      "b": [
+        286,
+        68
+      ]
+    },
+    {
+      "net": "CLOCK_3V3",
+      "a": [
+        286,
+        65
+      ],
+      "b": [
+        286,
+        71
+      ]
+    },
+    {
+      "net": "CLOCK_3V3",
+      "a": [
+        286,
+        65
+      ],
+      "b": [
+        307,
+        65
+      ]
+    },
+    {
+      "net": "CLOCK_3V3",
+      "a": [
+        286,
+        71
+      ],
+      "b": [
+        307,
+        71
+      ]
+    },
+    {
+      "net": "MOSI_5V",
+      "a": [
+        88,
+        88
+      ],
+      "b": [
+        135,
+        88
+      ]
+    },
+    {
+      "net": "MOSI_3V3",
+      "a": [
+        245,
+        88
+      ],
+      "b": [
+        286,
+        88
+      ]
+    },
+    {
+      "net": "MOSI_3V3",
+      "a": [
+        286,
+        85
+      ],
+      "b": [
+        286,
+        91
+      ]
+    },
+    {
+      "net": "MOSI_3V3",
+      "a": [
+        286,
+        85
+      ],
+      "b": [
+        307,
+        85
+      ]
+    },
+    {
+      "net": "MOSI_3V3",
+      "a": [
+        286,
+        91
+      ],
+      "b": [
+        307,
+        91
+      ]
+    },
+    {
+      "net": "LCD_CS_5V",
+      "a": [
+        88,
+        108
+      ],
+      "b": [
+        135,
+        108
+      ]
+    },
+    {
+      "net": "LCD_CS_3V3",
+      "a": [
+        245,
+        108
+      ],
+      "b": [
+        307,
+        108
+      ]
+    },
+    {
+      "net": "LCD_CS_5V",
+      "a": [
+        110,
+        108
+      ],
+      "b": [
+        110,
+        102
+      ]
+    },
+    {
+      "net": "5V",
+      "a": [
+        110,
+        96
+      ],
+      "b": [
+        110,
+        93
+      ]
+    },
+    {
+      "net": "DC_5V",
+      "a": [
+        88,
+        128
+      ],
+      "b": [
+        135,
+        128
+      ]
+    },
+    {
+      "net": "DC_3V3",
+      "a": [
+        245,
+        128
+      ],
+      "b": [
+        307,
+        128
+      ]
+    },
+    {
+      "net": "TOUCH_CS_5V",
+      "a": [
+        88,
+        148
+      ],
+      "b": [
+        135,
+        148
+      ]
+    },
+    {
+      "net": "TOUCH_CS_3V3",
+      "a": [
+        245,
+        148
+      ],
+      "b": [
+        307,
+        148
+      ]
+    },
+    {
+      "net": "TOUCH_CS_5V",
+      "a": [
+        110,
+        148
+      ],
+      "b": [
+        110,
+        142
+      ]
+    },
+    {
+      "net": "5V",
+      "a": [
+        110,
+        136
+      ],
+      "b": [
+        110,
+        133
+      ]
+    },
+    {
+      "net": "RESET_5V",
+      "a": [
+        88,
+        168
+      ],
+      "b": [
+        135,
+        168
+      ]
+    },
+    {
+      "net": "RESET_3V3",
+      "a": [
+        245,
+        168
+      ],
+      "b": [
+        307,
+        168
+      ]
+    },
+    {
+      "net": "TOUCH_5V",
+      "a": [
+        88,
+        203
+      ],
+      "b": [
+        135,
+        203
+      ]
+    },
+    {
+      "net": "TOUCH_3V3",
+      "a": [
+        245,
+        203
+      ],
+      "b": [
+        307,
+        203
+      ]
+    }
+  ],
+  "checks": "unique net membership, six channels, motor pins preserved, no different-net crossings",
+  "conditions": [
+    "TFT VCC regulator/jumper and LED connection",
+    "Actual LCD and touch controller identities/return VOH",
+    "Power sequencing and reset behavior"
+  ]
+}

@@ -2,6 +2,12 @@
 
 Arduino Nano on the original MR Innovative controller PCB, with two MG90S cutter servos.
 
+## Latest TFT interface diagram
+
+[Download the SN74LVC245A software-SPI diagram (PDF)](docs/tft-interface-simple/Nano-TFT-SN74LVC245A.pdf?raw=true) · [View diagram and connection notes](docs/tft-interface-simple/README.md)
+
+Use this signal allocation instead of the earlier hardware-SPI proposal. It uses the LVC245A rather than resistor dividers and preserves existing motor pins. Actual TFT power/backlight and startup checks remain outstanding.
+
 ## Schematic review
 
 [Read the PCB, Arduino Nano and motor-controller wiring review](docs/tft-wiring/wiring-review.md).
